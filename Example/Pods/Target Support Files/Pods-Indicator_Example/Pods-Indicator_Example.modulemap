@@ -1,0 +1,6 @@
+framework module Pods_Indicator_Example {
+  umbrella header "Pods-Indicator_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

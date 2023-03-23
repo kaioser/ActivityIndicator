@@ -1,0 +1,27 @@
+PODS:
+  - Indicator (0.1.0):
+    - Indicator/System (= 0.1.0)
+    - Indicator/Third (= 0.1.0)
+  - Indicator/System (0.1.0)
+  - Indicator/Third (0.1.0):
+    - MBProgressHUD
+  - MBProgressHUD (1.2.0)
+
+DEPENDENCIES:
+  - Indicator (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - MBProgressHUD
+
+EXTERNAL SOURCES:
+  Indicator:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Indicator: 8c58a143a98b1a844e9a19b9c3f7e56f94c4e50e
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+
+PODFILE CHECKSUM: b37d624f7b144c5b9890dddf4460797e5539da15
+
+COCOAPODS: 1.12.0
