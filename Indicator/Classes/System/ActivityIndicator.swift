@@ -16,7 +16,7 @@ class ActivityIndicator {
     static func start(_ view: UIView, offsetY: CGFloat) {
         if indicator.superview == nil {
             view.addSubview(indicator)
-            indicator.center = CGPoint(x: view.bounds.size.width * 0.5, y: view.bounds.size.height * 0.5 - offsetY)
+            indicator.center = CGPoint(x: view.bounds.size.width * 0.5, y: view.bounds.size.height * 0.5 + offsetY)
         }
         
         indicator.startAnimating()

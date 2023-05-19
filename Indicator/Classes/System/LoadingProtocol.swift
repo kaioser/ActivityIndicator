@@ -6,20 +6,24 @@
 //
 
 public protocol Activityable {
+    
     func startLoading()
+    
     func stopLoading()
     
-    /// y左边上移
-    var indicatorOffsetY: CGFloat { get }
-}
-
-extension Activityable {
-    public var indicatorOffsetY: CGFloat { 0 }
+    /// 指示器的中心点纵向偏移量
+    /// - Returns: 偏移值
+    func activityIndicatorViewOffsetY() -> CGFloat
 }
 
 public extension Activityable where Self: UIViewController {
+    
+    func activityIndicatorViewOffsetY() -> CGFloat {
+        0
+    }
+    
     func startLoading() {
-        ActivityIndicator.start(view, offsetY: indicatorOffsetY)
+        ActivityIndicator.start(view, offsetY: activityIndicatorViewOffsetY())
     }
     
     func stopLoading() {
@@ -27,11 +31,15 @@ public extension Activityable where Self: UIViewController {
     }
 }
 
-// 默认所有UIView都遵守了此协议，可以直接用
+// 默认所有UIView都遵守
 extension UIView: Activityable {
     
+    public func activityIndicatorViewOffsetY() -> CGFloat {
+        0
+    }
+    
     public func startLoading() {
-        ActivityIndicator.start(self, offsetY: indicatorOffsetY)
+        ActivityIndicator.start(self, offsetY: activityIndicatorViewOffsetY())
     }
     
     public func stopLoading() {
