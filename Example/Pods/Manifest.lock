@@ -1,5 +1,5 @@
 PODS:
-  - Indicator (0.1.1)
+  - Indicator (0.1.2)
 
 DEPENDENCIES:
   - Indicator (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Indicator: da34425a21fab2d6e24fbb659023ec1b843ecb2d
+  Indicator: d037681a490e67e1cb5350828b3626392d64de46
 
 PODFILE CHECKSUM: 803b5e3fe6ebec888bbbda5cd2d239f6f003273f
 
