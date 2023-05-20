@@ -22,7 +22,7 @@ pod 'Indicator'
 
 ## Author
 
-yangxiongkai, 1337503263@qq.com
+yangxiongkai, yangxiongkai@126.com
 
 ## License
 
