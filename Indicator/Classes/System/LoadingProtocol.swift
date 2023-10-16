@@ -16,6 +16,13 @@ public protocol Activityable {
     func activityIndicatorViewOffsetY() -> CGFloat
 }
 
+public extension Activityable {
+    
+    static func stopLoading() {
+        ActivityIndicator.stop()
+    }
+}
+
 public extension Activityable where Self: UIViewController {
     
     func activityIndicatorViewOffsetY() -> CGFloat {
