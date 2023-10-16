@@ -5,7 +5,7 @@
 //  Created by 杨雄凯 on 2023/3/23.
 //
 
-public protocol Activityable {
+public protocol Activityable: UIView {
     
     func startLoading()
     
@@ -23,26 +23,32 @@ public extension Activityable {
     }
 }
 
-public extension Activityable where Self: UIViewController {
-    
-    func activityIndicatorViewOffsetY() -> CGFloat {
-        0
-    }
-    
-    func startLoading() {
-        ActivityIndicator.start(view, offsetY: activityIndicatorViewOffsetY())
-    }
-    
-    func stopLoading() {
-        ActivityIndicator.stop()
-    }
-}
+//public extension Activityable where Self: UIViewController {
+//
+//    func activityIndicatorViewOffsetY() -> CGFloat {
+//
+//        debugPrint("xxxxxxxx" + "\(self.view.safeAreaInsets)")
+//
+//        return 0 - view.safeAreaInsets.top
+//    }
+//
+//    func startLoading() {
+//        ActivityIndicator.start(view, offsetY: activityIndicatorViewOffsetY())
+//    }
+//
+//    func stopLoading() {
+//        ActivityIndicator.stop()
+//    }
+//}
 
 // 默认所有UIView都遵守
 extension UIView: Activityable {
     
     public func activityIndicatorViewOffsetY() -> CGFloat {
-        0
+        
+        debugPrint("xxxxxxxx" + "\(self.safeAreaInsets)")
+        
+        return 0 - self.safeAreaInsets.top
     }
     
     public func startLoading() {
