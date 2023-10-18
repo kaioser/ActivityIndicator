@@ -46,7 +46,7 @@ extension UIView: Activityable {
     
     public func activityIndicatorViewOffsetY() -> CGFloat {
         
-        debugPrint("xxxxxxxx" + "\(self.safeAreaInsets)")
+        // debugPrint("xxxxxxxx:" + "\(self.safeAreaInsets)")
         
         return 0 - self.safeAreaInsets.top
     }
